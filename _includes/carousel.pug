@@ -1,0 +1,21 @@
+-let carouselClasses = "d-block w-105 img-fluid"
+.container-fluid.fixed-top.ml-0.mr-0(style="width: 100%; height: 60%;z-index: -5")
+ div(id="carousel" class="carousel slide " data-ride="carousel")
+  .carousel-inner(style="z-index: -1 !important")
+   each image, index in fetchimages
+    if (index===0)
+     .carousel-item.active
+      img(src= image class= carouselClasses alt="Products")
+    else
+     .carousel-item
+      img(src= image class= carouselClasses alt="Products")
+  a(class="carousel-control-prev" href="#carousel" role="button" data-slide="prev")
+    span(class="carousel-control-prev-icon" aria-hidden="true")
+    span(class="visually-hidden") Previous
+  a(class="carousel-control-next" href="#carousel" role="button" data-slide="next")
+    span(class="carousel-control-next-icon" aria-hidden="true")
+    span(class="visually-hidden") Next
+  
+
+
+    
