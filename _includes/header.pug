@@ -23,6 +23,7 @@ html(lang="en")
             display: flex;
             flex-direction: column;
             background: black;
+            width: 100%;
         }
 
         .logo {
@@ -47,7 +48,8 @@ html(lang="en")
         main {
             background: black;
             height: 100%;
-            z-index: 2
+            z-index: 2;
+            width: 100%;
         }
 
         nav {
@@ -156,13 +158,16 @@ html(lang="en")
         }
 
         @media screen and (max-width: 420px) {
-            .social-media-wrapper {
-                position: relative;
-                bottom: 10em;
+            .info-description {
+                margin-bottom: 5em;
             }
 
             .social-media-block h2 {
                 font-size: 1.5rem;
+            }
+
+            .nav-link {
+                width: 1vw;
             }
             
         }
@@ -178,7 +183,7 @@ html(lang="en")
 
             .info-section-wrapper {
                 position: relative;
-                left: 1em;
+                margin-left: 2em;
                 height: auto;
             }
 
@@ -231,9 +236,7 @@ html(lang="en")
                 position: relative;
                 bottom: 4em;
             }
-            .info-description {
-                font-size: 1.2rem;
-            }
+            
         }
 
 
