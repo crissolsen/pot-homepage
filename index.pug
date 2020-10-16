@@ -11,7 +11,7 @@ body
     .empty
    main
     nav
-      a(href="#")
+      a(href="#find-us")
        .nav-link 
         h2
          em Find Us
@@ -63,3 +63,69 @@ body
        img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247376/PrinceofTarts/DSCF3885_1620x1080_xcaign.jpg" alt="product image")
       .image-div
        img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247393/PrinceofTarts/DSCF5379_1620x1080_td1l9y.jpg" alt="product image")
+
+    section(class="quotes-carousel-wrapper")
+     .quotes-container
+      span(class="quotes-icon") &ldquo;
+      .quotes-div
+       q Upmarket, ahead of "George-times", modern, funky. Great friendly service. AWESOME tarts! Oh yah and yummie coffee!!
+       p(class="quotes-author") Sonja Steyn
+      .quotes-div
+       q Beautiful venue, great niche products
+       p(class="quotes-author") Petra Clark
+      .quotes-div
+       q Most friendly people you will ever meet, and don't forget about the amazing food. A MUST go place!!
+       p(class="quotes-author") Jan Negel
+     .dot-container
+        a(class="prev" onclick="plusSlides(-1)") &#10094;
+        span(class="dot" onclick="currentSlide(1)")
+        span(class="dot" onclick="currentSlide(2)")
+        span(class="dot" onclick="currentSlide(3)")
+        a(class="next" onclick="plusSlides(1)") &#10095;
+
+    section(id="find-us")
+      .find-us-title
+       h2 Find Us
+      .find-us-map
+       a(href="https://www.google.com/maps/place/Prince+of+Tarts/@-33.96431,22.466639,15z/data=!4m5!3m4!1s0x0:0xf5010784dd36c03c!8m2!3d-33.96431!4d22.466639" target="_blank")
+        img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/map_iugzn3.png" alt="find on map")
+      .find-us-phone
+        a(href="tel:+27828507292" data-content="+27828507292" data-type="phone" aria-label="Call Us" target="_blank")
+         img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/phone_cjohzr.png" alt="Call us")
+      .find-us-email
+        a(href="mailto:tyrone@princeoftarts.co.za" data-type="email" aria-label="email us")
+         img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/email_hluyxs.png")
+
+ script.
+          var slideIndex = 1;
+          showSlides(slideIndex);
+          setInterval(function() {
+            plusSlides(1)
+            },6000);
+
+          function plusSlides(n) {
+            showSlides(slideIndex += n);
+          }
+
+          function currentSlide(n) {
+            showSlides(slideIndex = n);
+          }
+
+          function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("quotes-div");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+              if (n < 1) {slideIndex = slides.length}
+              for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+              }
+              for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+              }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+          }
+
+
+       

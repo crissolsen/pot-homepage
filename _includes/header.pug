@@ -145,7 +145,7 @@ html(lang="en")
             margin: 0 auto;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: repeat(3, 1fr);
+            grid-template-rows: repeat(2, 1fr);
             grid-column-gap: 0.5rem;
             grid-row-gap: 0.5rem;
 
@@ -157,15 +157,175 @@ html(lang="en")
 
         }
 
+        .quotes-carousel-wrapper {
+            background: #404041;
+            padding-bottom: 3em;
+            margin-top: 1em;
+            animation: smooth-fades 8s infinite;
+        }
+
+        @keyframes smooth-fades {
+            0% {
+                background: #404041;
+            }
+            70% {
+                background: black;
+            }
+            100% {
+                background: #404041;
+            }
+        }
+
+        .quotes-div {
+            display: none;
+            position: relative;
+            top:5vh;
+            text-align: right;
+            width: 80%;
+            margin: 0 auto;
+            animation: fade-in 1s forwards;
+        }
+
+        @keyframes fade-in {
+            0%{
+                opacity: 0;
+            }
+            100% {
+                opacity: 100%;
+            }
+        }
+
+        .quotes-icon {
+            position: absolute;
+            font-size: 8rem;
+            opacity: 60%;
+            font-family: serif;
+            color: #FF6B03;
+            left: 0.2em;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            color: #FF6B03;
+            font-weight: bold;
+            font-size: 2em;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+            line-height: 0.5em;
+        }
+        
+        .prev {
+            margin-right: 1em;
+            
+        }
+
+        .next {
+            margin-left: 1em;
+        }
+
+        .dot-container {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            z-index: 3;
+            margin-top: 3.5em;
+        }
+
+        .dot {
+            cursor: pointer;
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #FF6B03;
+            border-radius: 50%;
+            display: inline-block;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .dot:hover {
+            background-color: #717171;
+        }
+
+        q {
+            font-family: "Trebuchet MS", Helvetica, sans-serif;
+            font-size: 2em;
+
+        }
+
+        #find-us {
+            display: grid;
+            height: 15vmax;
+            margin: 0 auto;
+            width: 80%;
+            align-items: start;
+            justify-items: center;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .find-us-title {
+            grid-row: 1/2;
+            grid-column: 2/3;
+            align-self: center;
+            font-size: 1.5em;
+        }
+
+        .find-us-map {
+            grid-row: 2/3;
+            grid-column: 1/2;
+          
+        }
+
+        .find-us-phone {
+            grid-row: 2/3;
+            grid-column: 2/3;
+            
+        }
+
+        .find-us-email {
+            grid-row: 2/3;
+            grid-column: 3/4;
+            
+        }
+
+        @media screen and (max-width: 360px) {
+            .info-section-wrapper {
+                height: 100vmax !important;
+                margin-bottom: 5em !important;
+            }
+
+            .info-description {
+                display: relative;
+                right: 0 !important;
+            }
+            .social-media-block h2 {
+                font-size: 1.2rem !important;
+                width: 100%;
+            }
+
+            .social-media-block {
+                height: 5vh;
+            }
+
+            .quotes-carousel-wrapper {
+                padding-bottom: 2em;
+            }
+        }
+
         @media screen and (max-width: 420px) {
             .nav-link {
                 font-size: 0.8rem;
             }
             
             .info-section-wrapper {
-                margin-bottom: 12em;
+                height: 50vmax;
+                margin-bottom: 15em;
             }
 
+            .rounded-image img {
+                display: relative;
+                right: 0.2em;
+            }
             .social-media-block h2 {
                 font-size: 1.5rem;
             }
@@ -222,11 +382,8 @@ html(lang="en")
             .image-grid-div {
                 grid-template-columns: auto;
                 grid-template-rows: auto;
-               
             }
         }
-
-        
     
         @media screen and (max-width: 760px) {
             .nav-link {
@@ -243,6 +400,9 @@ html(lang="en")
                 height: 50vmax;
             }
 
+            .image-gallery-wrapper {
+                margin-bottom: -5em;
+            }
         }
 
         @media screen and (max-width: 850px) {

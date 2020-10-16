@@ -135,7 +135,7 @@ section {
     margin: 0 auto;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
 
@@ -147,15 +147,175 @@ section {
 
 }
 
+.quotes-carousel-wrapper {
+    background: #404041;
+    padding-bottom: 3em;
+    margin-top: 1em;
+    animation: smooth-fades 8s infinite;
+}
+
+@keyframes smooth-fades {
+    0% {
+        background: #404041;
+    }
+    70% {
+        background: black;
+    }
+    100% {
+        background: #404041;
+    }
+}
+
+.quotes-div {
+    display: none;
+    position: relative;
+    top:5vh;
+    text-align: right;
+    width: 80%;
+    margin: 0 auto;
+    animation: fade-in 1s forwards;
+}
+
+@keyframes fade-in {
+    0%{
+        opacity: 0;
+    }
+    100% {
+        opacity: 100%;
+    }
+}
+
+.quotes-icon {
+    position: absolute;
+    font-size: 8rem;
+    opacity: 60%;
+    font-family: serif;
+    color: #FF6B03;
+    left: 0.2em;
+}
+
+.prev, .next {
+    cursor: pointer;
+    color: #FF6B03;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    line-height: 0.5em;
+}
+
+.prev {
+    margin-right: 1em;
+    
+}
+
+.next {
+    margin-left: 1em;
+}
+
+.dot-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+    margin-top: 3.5em;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #FF6B03;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+    background-color: #717171;
+}
+
+q {
+    font-family: "Trebuchet MS", Helvetica, sans-serif;
+    font-size: 2em;
+
+}
+
+#find-us {
+    display: grid;
+    height: 15vmax;
+    margin: 0 auto;
+    width: 80%;
+    align-items: start;
+    justify-items: center;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.find-us-title {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    align-self: center;
+    font-size: 1.5em;
+}
+
+.find-us-map {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  
+}
+
+.find-us-phone {
+    grid-row: 2/3;
+    grid-column: 2/3;
+    
+}
+
+.find-us-email {
+    grid-row: 2/3;
+    grid-column: 3/4;
+    
+}
+
+@media screen and (max-width: 360px) {
+    .info-section-wrapper {
+        height: 100vmax !important;
+        margin-bottom: 5em !important;
+    }
+
+    .info-description {
+        display: relative;
+        right: 0 !important;
+    }
+    .social-media-block h2 {
+        font-size: 1.2rem !important;
+        width: 100%;
+    }
+
+    .social-media-block {
+        height: 5vh;
+    }
+
+    .quotes-carousel-wrapper {
+        padding-bottom: 2em;
+    }
+}
+
 @media screen and (max-width: 420px) {
     .nav-link {
         font-size: 0.8rem;
     }
     
     .info-section-wrapper {
-        margin-bottom: 12em;
+        height: 50vmax;
+        margin-bottom: 15em;
     }
 
+    .rounded-image img {
+        display: relative;
+        right: 0.2em;
+    }
     .social-media-block h2 {
         font-size: 1.5rem;
     }
@@ -212,11 +372,8 @@ section {
     .image-grid-div {
         grid-template-columns: auto;
         grid-template-rows: auto;
-       
     }
 }
-
-
 
 @media screen and (max-width: 760px) {
     .nav-link {
@@ -233,6 +390,9 @@ section {
         height: 50vmax;
     }
 
+    .image-gallery-wrapper {
+        margin-bottom: -5em;
+    }
 }
 
 @media screen and (max-width: 850px) {
@@ -254,7 +414,35 @@ section {
         bottom: 4em;
     }
     
-}</style></head></html><body><div class="whole-page-wrapper"><header><div class="logo"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="company logo"></div><div class="empty"></div></header><main><nav><a href="#"><div class="nav-link"> <h2><em>Find Us</em></h2></div></a><a href="#"><div class="nav-link"><h2><em>Cakes</em></h2></div></a><a href="#"><div class="nav-link"><h2><em>Menu</em></h2></div></a></nav><section class="info-section-wrapper"><div class="info-section"><div class="rounded-image"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/w_500,h_500,c_fill,f_auto,q_auto,r_max,bo_5px_solid_white/v1602247407/PrinceofTarts/DSCF5452_1620x1080_id0ccf.jpg" alt="Delicious treats"></div><div class="info-description"><div class="info-title"><h1>Welcome</h1></div><div class="info-p"><p> At Prince of Tarts we are constantly innovating our products to deliver the highest quality products. 
+}</style></head></html><body><div class="whole-page-wrapper"><header><div class="logo"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="company logo"></div><div class="empty"></div></header><main><nav><a href="#find-us"><div class="nav-link"> <h2><em>Find Us</em></h2></div></a><a href="#"><div class="nav-link"><h2><em>Cakes</em></h2></div></a><a href="#"><div class="nav-link"><h2><em>Menu</em></h2></div></a></nav><section class="info-section-wrapper"><div class="info-section"><div class="rounded-image"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/w_500,h_500,c_fill,f_auto,q_auto,r_max,bo_5px_solid_white/v1602247407/PrinceofTarts/DSCF5452_1620x1080_id0ccf.jpg" alt="Delicious treats"></div><div class="info-description"><div class="info-title"><h1>Welcome</h1></div><div class="info-p"><p> At Prince of Tarts we are constantly innovating our products to deliver the highest quality products. 
 The process of blending fresh ingredients with our passion has evolved the bakery into what it has been shaped into today. 
 Recipes are derived from months and years of trial and error to create the desirables that you've all come to know and love. 
-We appreciate the support from friends, family and loyal clients over the years. We will continue to do our best.</p></div></div></div></section><section class="social-media-wrapper"><div class="social-media-content"><div class="social-media-block"><a href="https://facebook.com/princeoftartsofficial" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_30,q_auto,f_auto/v1602769589/145802_owg9gx.svg" alt="facebook logo"></a></div><div class="social-media-block"><h2>Join the Journey</h2></div><div class="social-media-block"><a href="https://instagram.com/princeoftartsofficial" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_30,q_auto,f_auto/v1602769589/1409946_ishatl.svg" alt="instagram logo"></a></div></div></section><section class="image-gallery-wrapper"><div class="image-grid-div"><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247387/PrinceofTarts/DSCF3840_1620x1080_kyoavc.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247384/PrinceofTarts/DSCF2944_1620x1080_q36ffy.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247377/PrinceofTarts/DSCF3281_1620x1080_temphi.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247425/PrinceofTarts/DSCF6922_1620x1080_hyz0er.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247376/PrinceofTarts/DSCF3885_1620x1080_xcaign.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247393/PrinceofTarts/DSCF5379_1620x1080_td1l9y.jpg" alt="product image"></div></div></section></main></div></body>
+We appreciate the support from friends, family and loyal clients over the years. We will continue to do our best.</p></div></div></div></section><section class="social-media-wrapper"><div class="social-media-content"><div class="social-media-block"><a href="https://facebook.com/princeoftartsofficial" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_30,q_auto,f_auto/v1602769589/145802_owg9gx.svg" alt="facebook logo"></a></div><div class="social-media-block"><h2>Join the Journey</h2></div><div class="social-media-block"><a href="https://instagram.com/princeoftartsofficial" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_30,q_auto,f_auto/v1602769589/1409946_ishatl.svg" alt="instagram logo"></a></div></div></section><section class="image-gallery-wrapper"><div class="image-grid-div"><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247387/PrinceofTarts/DSCF3840_1620x1080_kyoavc.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247384/PrinceofTarts/DSCF2944_1620x1080_q36ffy.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247377/PrinceofTarts/DSCF3281_1620x1080_temphi.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247425/PrinceofTarts/DSCF6922_1620x1080_hyz0er.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247376/PrinceofTarts/DSCF3885_1620x1080_xcaign.jpg" alt="product image"></div><div class="image-div"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/c_fill,q_auto,f_auto/v1602247393/PrinceofTarts/DSCF5379_1620x1080_td1l9y.jpg" alt="product image"></div></div></section><section class="quotes-carousel-wrapper"><div class="quotes-container"><span class="quotes-icon">&ldquo;</span><div class="quotes-div"><q>Upmarket, ahead of "George-times", modern, funky. Great friendly service. AWESOME tarts! Oh yah and yummie coffee!!</q><p class="quotes-author">Sonja Steyn</p></div><div class="quotes-div"><q>Beautiful venue, great niche products</q><p class="quotes-author">Petra Clark</p></div><div class="quotes-div"><q>Most friendly people you will ever meet, and don't forget about the amazing food. A MUST go place!!</q><p class="quotes-author">Jan Negel</p></div></div><div class="dot-container"><a class="prev" onclick="plusSlides(-1)">&#10094;</a><span class="dot" onclick="currentSlide(1)"></span><span class="dot" onclick="currentSlide(2)"></span><span class="dot" onclick="currentSlide(3)"></span><a class="next" onclick="plusSlides(1)">&#10095;</a></div></section><section id="find-us"><div class="find-us-title"><h2>Find Us</h2></div><div class="find-us-map"><a href="https://www.google.com/maps/place/Prince+of+Tarts/@-33.96431,22.466639,15z/data=!4m5!3m4!1s0x0:0xf5010784dd36c03c!8m2!3d-33.96431!4d22.466639" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/map_iugzn3.png" alt="find on map"></a></div><div class="find-us-phone"><a href="tel:+27828507292" data-content="+27828507292" data-type="phone" aria-label="Call Us" target="_blank"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/phone_cjohzr.png" alt="Call us"></a></div><div class="find-us-email"><a href="mailto:tyrone@princeoftarts.co.za" data-type="email" aria-label="email us"><img src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/email_hluyxs.png"></a></div></section></main></div><script>var slideIndex = 1;
+showSlides(slideIndex);
+setInterval(function() {
+  plusSlides(1)
+  },6000);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("quotes-div");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}</script></body>
