@@ -2,7 +2,7 @@ doctype html
 html(lang="en")
  head
   meta(charset="utf-8")
-  meta(name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no")
+  meta(name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no")
   meta(name="description" content="Prince of Tarts is the best bakery in the Garden Route. You are able to custom order or come into our shop on Hibernia street. Enjoy sweet treats as well as savoury. Only the best!")
   meta(name="keywords" content="prince of tarts, bakery garden route, bakery, garden route coffee, george coffee, george bakery, cakes, cake george, cakes george, cakes garden route")
   link(rel="icon" type="image" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
@@ -85,7 +85,7 @@ html(lang="en")
         }
         
         .info-section-wrapper {
-            height: 40vmax;
+            height: 38vmax;
         }
 
         .info-section {
@@ -94,6 +94,7 @@ html(lang="en")
             grid-template-rows: 1fr 2fr;
             flex-wrap: wrap;
             width: 60%;
+            height: 100%;
             margin: 0 auto;
             background: black;
         }
@@ -107,10 +108,9 @@ html(lang="en")
         }
 
         .info-description {
-            grid: 2/2/2/2;
             display: flex;
             flex-direction: column;
-            text-align: justify;           
+            text-align: justify;
         }
 
         .info-title {
@@ -158,16 +158,21 @@ html(lang="en")
         }
 
         @media screen and (max-width: 420px) {
-            .info-description {
-                margin-bottom: 5em;
+            .nav-link {
+                font-size: 0.8rem;
+            }
+            
+            .info-section-wrapper {
+                margin-bottom: 12em;
             }
 
             .social-media-block h2 {
                 font-size: 1.5rem;
             }
 
-            .nav-link {
-                width: 1vw;
+            .image-grid-div {
+                background: black;
+                margin-top: 1em;
             }
             
         }
@@ -182,9 +187,8 @@ html(lang="en")
             }
 
             .info-section-wrapper {
-                position: relative;
-                margin-left: 2em;
-                height: auto;
+                margin-left: 1em;
+                height: 60vmax;
             }
 
             .info-description {
@@ -211,13 +215,20 @@ html(lang="en")
                 font-size: 5vw;
             }
 
+            .social-media-wrapper {
+                margin-top: 3em;
+            }
+
             .image-grid-div {
                 grid-template-columns: auto;
                 grid-template-rows: auto;
+               
             }
         }
+
+        
     
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 760px) {
             .nav-link {
                 position: relative;
                 top: 2em;
@@ -228,7 +239,23 @@ html(lang="en")
                 margin-top: 1em;
             }
 
+            .info-section-wrapper {
+                height: 50vmax;
+            }
 
+        }
+
+        @media screen and (max-width: 850px) {
+            .social-media-wrapper {
+                position: relative;
+                top: 2em;
+            }
+
+            .image-gallery-wrapper {
+                z-index: -1;
+                padding-top: 3em;
+                margin-top: 3em;
+            }
         }
 
          @media screen and (max-width: 1280px) {
