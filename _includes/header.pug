@@ -8,6 +8,8 @@ html(lang="en")
   link(rel="icon" type="image" href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,dpr_auto,w_0.25/v1602247579/PrinceofTarts/logo-black_g0gkfc.png")
   title #{ title }
   style.
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
         * {
             margin: 0;
             padding: 0;
@@ -16,7 +18,7 @@ html(lang="en")
         body {
             background-color: black;
             color: white;
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: 'Poppins', sans-serif;
         }
 
         .whole-page-wrapper {
@@ -30,10 +32,11 @@ html(lang="en")
             display: flex;
             position: fixed;
             width: 100%;
-            padding-top: 10vh;
+            padding-top: 8vh;
             padding-bottom: 8vh; 
             justify-content: center;
-            background: white;
+            background-image: url("https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto,e_blur:300/v1603367636/PrinceofTarts/74209739_451999215453030_2301134707150028800_n_ppw2lb.jpg");
+            background-size: contain;
             z-index: 1;
         }
 
@@ -43,6 +46,7 @@ html(lang="en")
 
         .empty {
             height: 35vmax;
+            
         }
 
         main {
@@ -72,11 +76,7 @@ html(lang="en")
 
         nav a {
             text-decoration: none;
-        }
-
-        nav a em{
             color: white;
-            font-weight: 100;
         }
 
         section {
@@ -87,6 +87,8 @@ html(lang="en")
         .info-section-wrapper {
             height: 38vmax;
             width: 100%;
+            margin-bottom: 1em;
+            line-height: 1.5em;
         }
 
         .info-section {
@@ -94,7 +96,7 @@ html(lang="en")
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 2fr;
             flex-wrap: wrap;
-            width: 60%;
+            width: 80%;
             height: 100%;
             margin: 0 auto;
             background: black;
@@ -262,6 +264,7 @@ html(lang="en")
             justify-items: center;
             grid-template-rows: 1fr 1fr;
             grid-template-columns: 1fr 1fr 1fr;
+            background: none;
         }
 
         .find-us-title {
@@ -289,12 +292,17 @@ html(lang="en")
             grid-column: 3/4;
             
         }
+
+        .image-gallery-title {
+            text-align: center;
+            margin-bottom: 1em;
+            font-size: 1.4em;
+        }
                 
         @media screen and (max-width: 370px) {
             .info-section-wrapper {
-                height: 100vmax !important;
-                margin-bottom: 5em !important;
-
+                position: relative;
+                bottom: 2em;
             }
 
             .info-section {
@@ -308,12 +316,16 @@ html(lang="en")
 
             }
             .social-media-block h2 {
-                font-size: 1.2rem !important;
+                font-size: 1.5rem !important;
                 width: 100%;
             }
 
             .social-media-block {
                 height: 5vh;
+            }
+
+            .social-media-wrapper {
+                background: none;
             }
 
             .quotes-carousel-wrapper {
@@ -327,10 +339,6 @@ html(lang="en")
                  right: 1em;
              }
              
-             .info-description {
-                display: relative;
-            }
-
          }
 
         @media screen and (max-width: 610px) {
@@ -347,6 +355,7 @@ html(lang="en")
                 display: relative;
                 right: 0.2em;
             }
+
             .social-media-block h2 {
                 font-size: 1.5rem;
             }
@@ -436,17 +445,15 @@ html(lang="en")
     
         @media screen and (max-width: 760px) {
             .nav-link {
-                position: relative;
-                top: 2em;
                 width: 12vmax;
-                margin-bottom: 1em;
+                margin-bottom: 1.2em;
             }
             .rounded-image img {
                 margin-top: 1em;
             }
 
             .info-section-wrapper {
-                height: 50vmax;
+                height: 48vmax;
             }
 
             .image-gallery-wrapper {
@@ -455,6 +462,10 @@ html(lang="en")
         }
 
         @media screen and (max-width: 1000px) {
+            .info-title {
+                margin-bottom: 0.5em;
+            }
+            
             .social-media-wrapper {
                 position: relative;
                 top: 2em;
@@ -467,15 +478,67 @@ html(lang="en")
             }
         }
 
-         @media screen and (max-width: 1280px) {
+        @media screen and (max-width: 1200px) {
+            nav {
+                margin-top: 1em;
+            }
+            
             .image-gallery-wrapper {
                 position: relative;
                 bottom: 4em;
             }
-            
+                        
+        }
+
+        @media screen and (min-width: 730px) {
+            .social-media-block img{
+                position: relative;
+                top: 0.5em;
+            }
+        }
+
+        @media screen and (min-width: 1000px) {
+            .info-title {
+                margin-bottom: 0.5em;
+            }
+            nav {
+                padding-bottom: 1em;
+                padding-top: 0;
+            }
+        }
+
+         @media screen and (min-width: 1600px) {
+            header {
+                padding-bottom: 1em;
+            }
+
+            header {
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+            nav {
+                padding-top: 1em;
+                background: black;
+
+            }
+
+            .info-section {
+                width: 50%;
+            }
+
+            .social-media-block {
+                margin-bottom: 0;
+
+                
+            }
+                         
         }
 
         @media screen and (min-width: 1200px) {
+            .info-title {
+                margin-top: 0.5em;
+                margin-bottom: 0.5em;
+            }
             .info-p {
                 font-size: 1.2rem;
                 margin-top: 1em;
