@@ -7,6 +7,7 @@ body
  .whole-page-wrapper
    header
     .logo
+     a(href="/")
       img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto/v1602247579/PrinceofTarts/logo-black_g0gkfc.png" alt="company logo")
     .empty
    main
@@ -14,7 +15,7 @@ body
       a(href="#find-us")
        .nav-link 
         h2 Find Us
-      a(href="#")
+      a(href="/_views/cake-gallery")
        .nav-link
         h2 Cakes
       a(href="https://res.cloudinary.com/dvwsiufhl/image/upload/q_auto,f_auto/v1602506444/PrinceofTarts/Prince_of_Tarts_Menu_ltunc2.jpg" target="_blank" rel="noreferrer")
@@ -65,19 +66,23 @@ body
      .quotes-container
       span(class="quotes-icon") &ldquo;
       .quotes-div
-       q Upmarket, ahead of "George-times", modern, funky. Great friendly service. AWESOME tarts! Oh yah and yummie coffee!!
-       p(class="quotes-author") Sonja Steyn
+       q Best sweet and savory treats I've ever had. Can definitely recommend a visit to the Prince of Tarts.
+       p(class="quotes-author") Andrea Kruger
       .quotes-div
        q Beautiful venue, great niche products
        p(class="quotes-author") Petra Clark
       .quotes-div
        q Most friendly people you will ever meet, and don't forget about the amazing food. A MUST go place!!
        p(class="quotes-author") Jan Negel
+      .quotes-div
+       q Great coffee, brilliant service and scrumptious cheesecake.
+       p(class="quotes-author") Nadia Margrate
      .dot-container
         a(class="prev" onclick="plusSlides(-1)") &#10094;
         span(class="dot" onclick="currentSlide(1)")
         span(class="dot" onclick="currentSlide(2)")
         span(class="dot" onclick="currentSlide(3)")
+        span(class="dot" onclick="currentSlide(4)")
         a(class="next" onclick="plusSlides(1)") &#10095;
 
     section(id="find-us")
@@ -87,8 +92,8 @@ body
        a(href="https://www.google.com/maps/place/Prince+of+Tarts/@-33.96431,22.466639,15z/data=!4m5!3m4!1s0x0:0xf5010784dd36c03c!8m2!3d-33.96431!4d22.466639" target="_blank" rel="noreferrer")
         img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/map_iugzn3.png" alt="find on map")
       .find-us-phone
-        a(href="tel:+27828507292" data-content="+27828507292" data-type="phone" aria-label="Call Us" target="_blank")
-         img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/phone_cjohzr.png" alt="Call us")
+        a(href="https://wa.me/27828507292?text=Hi%20I'm%20interested%20in" aria-label="WhatsApp Us" target="_blank")
+         img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1603375292/PrinceofTarts/icons8-whatsapp-150_biuww5.png" alt="Chat to us")
       .find-us-email
         a(href="mailto:tyrone@princeoftarts.co.za" data-type="email" aria-label="email us")
          img(src="https://res.cloudinary.com/dvwsiufhl/image/upload/h_50,q_auto,f_auto/v1602844438/PrinceofTarts/email_hluyxs.png" alt="email us")
@@ -96,7 +101,7 @@ body
    footer
     .footer-text(style="text-align: center")
       p &#169; Prince of Tarts 2020 Website by 
-       a(href="https://homecode.co.za" style="color: white" rel="noreferrer") homeCode
+       a(href="https://homecode.co.za" style="color: white" rel="noreferrer") Chris from homeCode
     // Icons from Icons8.com
  script.
           var slideIndex = 1;
