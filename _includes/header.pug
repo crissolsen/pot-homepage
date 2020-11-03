@@ -15,10 +15,15 @@ html(lang="en")
             padding: 0;
         }
 
+        html {
+            overflow-x: hidden;
+        }
+
         body {
             background-color: black;
             color: white;
             font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
         }
 
         .whole-page-wrapper {
@@ -27,6 +32,8 @@ html(lang="en")
             background: black;
             width: 100%;
         }
+
+
 
         .logo {
             display: flex;
@@ -38,6 +45,7 @@ html(lang="en")
             background-image: url("https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto,e_blur:300/v1604403500/PrinceofTarts/DSCF8825_1620x1080_pgjrdr.jpg");
             background-size: cover;
             z-index: 1;
+            
         }
 
         .logo img {
@@ -339,6 +347,9 @@ html(lang="en")
                  right: 1em;
              }
              
+             .logo {
+                 position: absolute;
+             }
          }
 
         @media screen and (max-width: 610px) {
@@ -382,7 +393,8 @@ html(lang="en")
             }
 
             .info-section-wrapper {
-                margin-left: 1em;
+                position: relative;
+                left: 1em;
                 height: 60vmax;
                 margin-bottom: 15em;
             }
@@ -412,6 +424,7 @@ html(lang="en")
             position: relative;
             right: 1em;
             flex-direction: column;
+            width: 100%;
             }   
 
             .info-title h1 {
