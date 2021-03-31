@@ -38,17 +38,19 @@ html(lang="en")
             display: flex;
             position: fixed;
             width: 100%;
-            padding-top: 8vh;
+            height: 25vmax;
+            padding-top: 10vh;
             padding-bottom: 8vh; 
-            justify-content: center;
+            justify-content: flex-end;
             background-image: url("https://res.cloudinary.com/dvwsiufhl/image/upload/f_auto,q_auto,e_blur:300/v1604403500/PrinceofTarts/DSCF8825_1620x1080_pgjrdr.jpg");
             background-size: cover;
+            background-position: 0 -1em;
             z-index: 1;
-            
         }
 
         .logo img {
-            height: 20vmax;
+            height: 15vmax;
+            padding-right: 1em;
         }
 
         .empty {
@@ -472,6 +474,16 @@ html(lang="en")
             .image-gallery-wrapper {
                 margin-bottom: -5em;
             }
+
+            .logo {
+               justify-content: center;
+               align-items: flex-end;
+            }
+
+            .logo img {
+                padding: 0 !important;
+            }
+
         }
 
         @media screen and (max-width: 1000px) {
@@ -488,6 +500,11 @@ html(lang="en")
                 z-index: -1;
                 padding-top: 3em;
                 margin-top: 3em;
+            }
+
+            .logo img {
+                padding-right: 8em;
+                
             }
         }
 
@@ -517,7 +534,12 @@ html(lang="en")
             nav {
                 padding-bottom: 1em;
                 padding-top: 0;
-                margin-top: 0;
+                margin-top: 1em;
+            }
+
+            .logo img {
+                padding-right: 10em;
+                height: 20vmax;
             }
         }
 
@@ -544,9 +566,11 @@ html(lang="en")
             }
 
             .social-media-block {
-                margin-bottom: 0;
+                margin-bottom: 0;   
+            }
 
-                
+            .logo img {
+                padding-right: 15em;
             }
                          
         }
